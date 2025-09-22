@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>Expense Splitter (Equal Split)</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<header><h1>Expense Splitter</h1></header>
+
+<main class="container">
+  <section class="card">
+    <h2>1) Add Members</h2>
+    <div class="content">
+      <form id="memberForm">
+        <label>Member ID</label>
+        <input name="id" type="text" placeholder="u1" required />
+        <label>Name</label>
+        <input name="name" type="text" placeholder="Aarav" required />
+        <button class="btn">Add Member</button>
+      </form>
+      <p class="muted">Current Members:</p>
+      <div id="membersList"></div>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>2) Add Expense (Equal Split)</h2>
+    <div class="content">
+      <form id="expenseForm">
+        <label>Description</label>
+        <input name="desc" type="text" placeholder="Dinner" required />
+        <div class="row">
+          <div class="col">
+            <label>Amount (₹)</label>
+            <input name="amount" type="number" step="0.01" min="0.01" placeholder="500" required />
+          </div>
+          <div class="col">
+            <label>Paid By</label>
+            <select name="paidBy" id="paidBySelect" required></select>
+          </div>
+        </div>
+        <label>Participants (split equally)</label>
+        <div id="participantsBox"></div>
+        <button class="btn">Add Expense</button>
+      </form>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>3) Expenses</h2>
+    <div class="content">
+      <table id="expensesTable">
+        <thead><tr><th>#</th><th>Description</th><th>Paid By</th><th>Amount</th><th>Participants</th></tr></thead>
+        <tbody></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="card">
+    <h2>4) Summary</h2>
+    <div class="content">
+      <h3>Balances (paid − owed)</h3>
+      <table id="balancesTable">
+        <thead><tr><th>Member</th><th>Balance</th></tr></thead>
+        <tbody></tbody>
+      </table>
+
+      <h3>Who Pays Whom</h3>
+      <ul id="settlementsList"></ul>
+
+      <div class="row">
+        <button id="refreshBtn" class="btn secondary">Refresh</button>
+        <button id="resetBtn" class="btn warn">Reset All</button>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>Expense Splitter</footer>
+<script src="script.js"></script>
+</body>
+</html>

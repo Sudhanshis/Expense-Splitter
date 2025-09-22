@@ -1,0 +1,22 @@
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;margin:0;background:#f6f7fb;color:#222}
+header{background:#4f46e5;color:#fff;padding:16px 20px}
+h1{margin:0;font-size:20px}
+.container{max-width:960px;margin:20px auto;padding:0 16px;display:grid;gap:16px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:12px;box-shadow:0 1px 2px rgba(0,0,0,.04)}
+.card h2{margin:0;padding:14px 16px;border-bottom:1px solid #f0f0f0;font-size:18px}
+.content{padding:14px 16px}
+label{display:block;margin:6px 0 4px;font-weight:600;font-size:13px}
+input[type=text],input[type=number],select{width:100%;padding:10px;border:1px solid #d1d5db;border-radius:8px;font-size:14px}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.col{flex:1;min-width:220px}
+.btn{background:#4f46e5;color:#fff;border:none;padding:10px 14px;border-radius:8px;cursor:pointer;font-weight:600}
+.btn.secondary{background:#111827}
+.btn.warn{background:#dc2626}
+table{width:100%;border-collapse:collapse;font-size:14px}
+th,td{padding:10px;border-bottom:1px solid #eee;text-align:left}
+.muted{color:#666;font-size:13px}
+.chip{display:inline-block;background:#eef2ff;color:#3730a3;border:1px solid #c7d2fe;padding:2px 8px;border-radius:999px;font-size:12px;margin:2px}
+.ok{color:#16a34a}.bad{color:#dc2626}
+#participantsBox label{font-weight:400;display:inline-block;margin-right:12px}
+footer{text-align:center;color:#666;padding:16px}
